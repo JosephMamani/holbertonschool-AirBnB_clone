@@ -5,6 +5,7 @@ Defines Place class
 
 from models.base_model import BaseModel
 
+
 class Place(BaseModel):
     """
     Place class  saves the attributes of an place:
