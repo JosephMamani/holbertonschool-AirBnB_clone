@@ -49,9 +49,7 @@ class BaseModel():
                                       self.id, self.__dict__))
 
     def save(self):
-        """
-        Updates the public instance attribute
-        """
+        """Updates the public instance attribute"""
         self.updated_at = datetime.now()
         from models.__init__ import storage
         storage.save()
