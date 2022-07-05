@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" This module contains the entry point of the command interpreter """
+"""
+This module contains the entry point of the command interpreter
+"""
 import cmd
 import sys
 from models import storage
@@ -14,13 +16,17 @@ from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):
-    """Defines command interpreter parameters"""
+    """
+    Defines command interpreter parameters
+    """
     prompt = '(hbnb) '
     classes = ['Amenity', 'BaseModel', 'City',
                'Place', 'Review', 'State', 'User']
 
     def default(self, line):
-        """Define special input parameters"""
+        """
+        Define special input parameters
+        """
         parts = line.split(".")
         comm = parts[1].split("(")[0]
         if len(parts) > 0:
